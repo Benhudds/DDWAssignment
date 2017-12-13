@@ -12,7 +12,7 @@
 @if (count($users) > 0)
     @foreach($users as $user)
         <div class="well">
-            <h4><a href='/users/{{$user->id}}'>{{$user->email}}</a></h4>
+            <h4><a href='/users/{{$user->id}}' target='_top'>{{$user->email}}</a></h4>
             <h5>Name: <a href='/users/{{$user->id}}'>{{$user->name}}</a></h5>
         </div>
     @endforeach
