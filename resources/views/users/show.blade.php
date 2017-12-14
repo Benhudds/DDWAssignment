@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    <a href="/users" class="btn btn-default">Go Back</a>
     <h1>{{$user->name}}</h1>
     <div>
         <p>Email: {!!$user->email!!}</p>

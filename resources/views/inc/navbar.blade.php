@@ -26,6 +26,7 @@
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
                 @else
+                    <li><a href="/users/<?php echo Session::get('user')->id;?>">Profile</a></li>
                     <li><a href="/logout">Logout</a></li>
                 @endif
             </ul>

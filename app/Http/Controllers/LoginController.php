@@ -57,6 +57,7 @@ class LoginController extends Controller
         $user->access_level = 0;
         $user->save();
 
+        $request->session()->put('user', $user);
         return redirect('/posts')->with('success', 'Registered');
     }
 
