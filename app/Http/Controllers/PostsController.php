@@ -33,8 +33,10 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        if (!$request->session()->has('user'))
+            return redirect('/posts')->with('error', "Must be logged in to create a listing");
         return view('posts.create');
     }
 
